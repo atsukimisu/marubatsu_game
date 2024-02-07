@@ -1,7 +1,10 @@
 class Player:
+    def __init__(self, name) -> None:
+        self.name = name
+
     def name(self):
         print('プレイヤー1の名前を入力して下さい')
-        player_1 = input()
+        player_1 = self.name
         print('プレイヤー2の名前を入力して下さい')
         player_2 = input()
 
