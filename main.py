@@ -115,7 +115,7 @@ def main():
     while player_1.win == False and player_2.win == False:
         # プレイヤー１が入力する場所を入力
         player_1.your_turn()
-        while 
+        
         row, column = map(int, input().split())
         if board_arr[row][column] != " " or isinstance(row, float) or isinstance(column, float):
             print("もう一度入力して下さい")
