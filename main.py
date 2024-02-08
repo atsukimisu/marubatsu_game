@@ -116,10 +116,22 @@ def main():
         # プレイヤー１が入力する場所を入力
         player_1.your_turn()
         
-        row, column = map(int, input().split())
-        if board_arr[row][column] != " " or isinstance(row, float) or isinstance(column, float):
-            print("もう一度入力して下さい")
-        
+        row, column = input().split()
+        # if row not in ["1", "2", "3"]:
+        #     print("invalid input")
+        #     continue
+        # if column not in ["1", "2", "3"]:
+        #     print("invalid input")
+        #     continue
+        try:
+            row = int(row)
+            column = int(column)
+        except ValueError as value_error:
+            print("value_error: %s", value_error)
+            continue
+
+        # if board_arr[row][column] != " " or isinstance(row, float) or isinstance(column, float):
+        #     print("もう一度入力して下さい")
 
         # プレイヤー１が盤面を埋めて、表示
         GameBoard.fill_board(row, column, player_1)
