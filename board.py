@@ -1,5 +1,5 @@
 class GameBoard:
-    def current_board(self):
+    def first_board(self):
         column_number = 1
         board_arr = []
         for k in range(8):
@@ -42,10 +42,3 @@ class GameBoard:
                     print(i[j])
                 else:
                     print(i[j], end="")
-    
-    def attack(self):
-        print("行を選んでください")
-        column_index = int(input())
-        print("列を選んでください")
-        row_index = int(input())
-        
