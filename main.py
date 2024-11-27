@@ -73,7 +73,7 @@ class GameLogic:
         for i in column_index:
             if board_arr[row_index[0]][i] == board_arr[row_index[1]][i] == board_arr[row_index[2]][i] != " ":
                 player.win = True
-            
+
         # 横列の評価
         for i in row_index:
             if board_arr[i][column_index[0]] == board_arr[i][column_index[1]] == board_arr[i][column_index[2]] != " ":
@@ -87,7 +87,7 @@ class GameLogic:
 
     def winner(player: Player):
         print(f'{player.name}さんの勝利です！') 
-        
+
 
 
 class GameBoard:
@@ -115,7 +115,7 @@ def main():
     while player_1.win == False and player_2.win == False:
         # プレイヤー１が入力する場所を入力
         player_1.your_turn()
-        
+
         row, column = input().split()
         # if row not in ["1", "2", "3"]:
         #     print("invalid input")
@@ -143,7 +143,7 @@ def main():
         elif player_1.win == False and player_1.turn == 5:
             print('引き分けです…')
             break
-        
+
         # プレイヤー２が入力する場所を入力
         player_2.your_turn()
         row, column = map(int, input().split())

@@ -48,7 +48,7 @@ class GameLogic:
             for i in column_index:
                 if arr_board[row_index[0]][i] == arr_board[row_index[1]][i] == arr_board[row_index[2]][i] != " ":
                     player.win = True
-                
+
             # 横列の評価
             for i in row_index:
                 if arr_board[i][column_index[0]] == arr_board[i][column_index[1]] == arr_board[i][column_index[2]] != " ":
