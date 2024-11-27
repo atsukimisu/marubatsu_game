@@ -86,7 +86,7 @@ class GameLogic:
             player.win = True
 
     def winner(player: Player):
-        print(f'{player.name}さんの勝利です！') 
+        print(f'{player.name}さんの勝利です！')
 
 
 
